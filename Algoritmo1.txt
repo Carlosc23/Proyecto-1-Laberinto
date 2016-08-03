@@ -1,0 +1,26 @@
+#Carlos Calderon 15219
+#Jorge Azmitia 15202
+#Jennifer Barillas 15307
+#Algoritmos y estructuras de datos
+#Programa que recorre el mundo hasta encontrar un
+#beeper
+#Girar a la derecha
+def derecha(): 
+    repeat(turn_left, 3) 
+#Ruta predefinida para el robot
+def ruta(): 
+    if right_is_clear():  
+        derecha() 
+        move() 
+    elif front_is_clear():  
+        move() 
+    else:  
+        turn_left() 
+ #Mientas no este por un beeper,que siga la ruta
+while not next_to_a_beeper():  
+    ruta() 
+    #Si esta en el beeper, que lo agarre
+while on_beeper():
+    pick_beeper()
+#Apagar robot
+turn_off()
