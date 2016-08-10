@@ -32,7 +32,7 @@ bool pasoApaso=false; // true si queremos ver el recorrido paso a paso
 bool vision=true; // true para que el jugador "vea la meta a lo lejos"
 int metodo=1;
 int pasosReales; // Solo para metodo backtracking
-char ruta[20]="laberinto1.txt"; // Nombre del archivo que tiene los datos del laberinto
+char ruta[20]="laberinto2.txt"; // Nombre del archivo que tiene los datos del laberinto
 bool ya;
 
 bool backtracking(int i, int j){
@@ -346,9 +346,6 @@ void mueveJugador(int dir) {
 }    
 
 int main() { 
-   clock_t start, end; 
-	start = clock(); 
-
     int old_fp,old_cp;  // Las usaremos para poner un espacio en donde estaba el jugador 
     int meta=-1; // poner 1 o 0 para izquierda o derecha
     int codAscii;
@@ -408,4 +405,5 @@ int main() {
 
     return 0;
 }
+
 
